@@ -86,9 +86,9 @@ export default function App() {
           setData((prevPrices) => {
             const updatedData = prevPrices.map((prevPrice, i) => {
               if (prevPrice.price < newCoinsArr[i].price) {
-                return { ...prevPrice, status: "UP" };
+                return { ...newCoinsArr[i], status: "UP" };
               } else if (prevPrice.price > newCoinsArr[i].price) {
-                return { ...prevPrice, status: "DOWN" };
+                return { ...newCoinsArr[i], status: "DOWN" };
               }
 
               return prevPrice;
